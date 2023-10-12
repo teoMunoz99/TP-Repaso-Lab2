@@ -13,8 +13,9 @@
         $total = calcularTarifa($plan);
 
         // Mostrar el resultado
-
-        echo("El total a pagar con impuesto es: ".$total);
+        echo("El correo del usuario es: ".$correo."<br>");
+        echo("El plan elejido por el usuario es: ".$plan."<br>");
+        echo("El total a pagar con impuestos es: ".$total);
        
    
 ?>
