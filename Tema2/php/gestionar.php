@@ -1,10 +1,20 @@
 <?php
-    // Procesar el formulario
 
+    // Procesar el formulario
+    if(!empty($_POST['correo']) && !empty($_POST['clave']) && !empty($_POST['plan'])){
+        $correo = $_POST['correo'];
+        $clave = $_POST['clave'];
+        $plan = $_POST['plan'];
+    }else{
+        echo("Error al cargar los datos");
+    }
         // Invocar a la función para Calcular la tarifa
-        
+        include 'myFunctions.php';
+        $total = calcularTarifa($plan);
 
         // Mostrar el resultado
+
+        echo("El total a pagar con impuesto es: ".$total);
        
    
 ?>
